@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Profesional - Muhammad Azri Qhodroon Alfarizy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            transition: background-color 0.4s, color 0.4s;
+        }
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            flex-direction: column;
+            text-align: center;
+        }
+        .dark-mode {
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+        .card {
+            background: rgba(27, 36, 51, 0.85);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 450px;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .profile-img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            filter: brightness(0.9);
+        }
+        h1 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #94a3b8;
+            min-height: 24px;
+        }
+        /* Efek Ketikan */
+        #typing-text::after {
+            content: "|";
+            display: inline-block;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        /* Bagian Skill */
+        .skills {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .skills h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        .skill-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+        .skill-item i {
+            font-size: 18px;
+            color: #60a5fa;
+        }
+        .skill-item:hover {
+            transform: scale(1.1);
+        }
+        /* Bagian Sosial Media */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .social-links a {
+            color: #60a5fa;
+            font-size: 24px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #2563eb;
+            transform: scale(1.2);
+        }
+        /* Tombol Download CV */
+        .download-cv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 15px auto 0;
+            padding: 12px 24px;
+            background: #60a5fa;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .download-cv:hover {
+            background: #2563eb;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="src/gambar.jpg" alt="Foto Profil" class="profile-img" onerror="this.src='src/default.jpg'">
+        <h1>Muhammad Azri Qhodroon Alfarizy</h1>
+        <p id="typing-text"></p>
+
+        <!-- Bagian Skill -->
+        <div class="skills">
+            <h3>Keahlian:</h3>
+            <div class="skill-list">
+                <div class="skill-item"><i class="fab fa-android"></i> Full Stack Developer Android</div>
+                <div class="skill-item"><i class="fas fa-code"></i> C++, C#, Python, Kotlin</div>
+                <div class="skill-item"><i class="fas fa-microchip"></i> IoT & Arduino</div>
+                <div class="skill-item"><i class="fas fa-camera-retro"></i> Foto, Video Grafis & Editing</div>
+                <div class="skill-item"><i class="fas fa-database"></i> MySQL</div>
+                <div class="skill-item"><i class="fas fa-network-wired"></i> Mikrotik</div>
+                <div class="skill-item"><i class="fas fa-flag-usa"></i> Bahasa Inggris (Pasif), Jepang (Pasif - N5)</div>
+
+                
+            </div>
+        </div>
+
+        <!-- Bagian Sosial Media -->
+        <div class="social-links">
+            <a href="https://www.facebook.com/ahsanulfariz" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/6289619317755" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/ahsanulfariz" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/ahsanulfariz" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <a href="src/cv.pdf" class="download-cv" download>
+            <i class="fas fa-download"></i> Download CV
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const text = "Full Stack Developer | IoT Enthusiast | Tech Explorer";
+            let index = 0;
+            function typeText() {
+                if (index < text.length) {
+                    document.getElementById("typing-text").textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeText, 100);
+                }
+            }
+            typeText();
+        });
+    </script>
+</body>
+</html>
